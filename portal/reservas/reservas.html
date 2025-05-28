@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Sala de Reuniões PERFIPAR</title>
+    <link rel="stylesheet" href="../pag_principal/estilo.css">
+    <link rel="stylesheet" href="reservas.css">
+    <link rel="icon" href="/img/icone_site.png">
+</head>
+<body>
+    <header>
+        <h1><a href="../pag_principal/index.html">Intranet PERFIPAR</a>/Reservas de Sala</h1>
+    </header> 
+    <main id="escolha_sala">
+        <section id="secao_escolha">
+            <a href="#form_auditorio" onclick="mostrarSecao('secao_auditorio')">
+                <div id="sala_auditorio">
+                    <h2>Sala Auditório</h2>
+                    <img src="/img/sala_auditorio.png">
+                        <h4>Sala localizada ao lado da Controladoria.</h4>
+                </div>
+            </a>
+            
+            <a href="#form_reuniao" onclick="mostrarSecao('secao_reuniao')">
+                <div id="sala_reuniao">
+                    <h2>Sala Reunião</h2>
+                    <img src="/img/sala_reuniao.png">
+                        <h4>Sala localizada ao lado da Recepção.</h4>
+                </div>
+            </a>
+        </section>
+        <section id="secao_auditorio">
+            <form id="form_auditorio" action="#" method="POST">
+                    <h2>Reserva - Sala Auditório</h2>
+
+                    <!-- <img src="/img/sala_reuniao.png" alt=""> -->
+
+                    <div class="superior">
+                        <label for="nome_auditorio">Nome Completo:</label>
+                        <input type="text" id="nome_auditorio" name="nome_auditorio" required>
+                    
+                        <label for="setor_auditorio">Setor:</label>
+                        <select id="setor_auditorio" required>
+                            <option value="Almoxarifado">Almoxarifado</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Controladoria">Controladoria</option>
+                            <option value="Diretoria">Diretoria</option>
+                            <option value="Expedição">Expedição</option>
+                            <option value="Financeiro">Financeiro</option>
+                            <option value="Portaria">Portaria</option>
+                            <option value="PPCP">PPCP</option>
+                            <option value="Qualidade">Qualidade</option>
+                            <option value="Recepção">Recepção</option>
+                            <option value="RH">RH</option>
+                            <option value="TI">TI</option>
+                            <option value="MT-1">MT-1</option>
+                            <option value="MT-2">MT-2</option>
+                            <option value="MT-3">MT-3</option>
+                            <option value="MT-4">MT-4</option>
+                            <option value="MT-5">MT-5</option>
+                            <option value="TR'S">TR'S</option>
+                            <option value="MCT'S">MCT'S</option>
+                        </select>
+                    </div>
+                
+                    <div class="centro">
+                        <label for="descricao_auditorio">Breve Descrição da Reunião:</label>
+                        <textarea id="descricao_auditorio" name="descricao_auditorio" rows="4" required></textarea>
+                    </div>
+
+                    <div class="inferior">
+                        <label for="data_auditorio">Selecione o dia:</label>
+                        <input type="date" id="data_auditorio" name="data_auditorio" required>
+                        <!-- Outros campos -->
+                        <label for="hora_inicio_auditorio">Hora de Início:</label>
+                        <input type="time" id="hora_inicio_auditorio" required>
+                        
+                        
+                        <label for="hora_termino_auditorio">Hora de Término:</label>
+                        <input type="time" id="hora_termino_auditorio" required> 
+                    </div>         
+                    
+                    <div class="botoes">
+                        <button type="submit">Reservar Sala Auditório</button>
+
+                        <button type="button" class="botao_cancelar" onclick="esconderSecao('secao_auditorio')">Cancelar</button>
+                    </div>
+            </form>
+            <div class="reservas_agendadas">
+                <h2>Próximas reservas agendadas</h2>
+                <table id="reservas_auditorio">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Setor</th>
+                            <th>Dia</th>
+                            <th>Hora Início</th>
+                            <th>Hora Término</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="secao_reuniao">
+            <form id="form_reuniao" action="#" method="POST">
+                    <h2>Reserva - Sala Reunião</h2>
+
+                    <!-- <img src="/img/sala_reuniao.png" alt=""> -->
+
+                    <div class="superior">
+                        <label for="nome_reuniao">Nome Completo:</label>
+                        <input type="text" id="nome_reuniao" name="nome_reuniao" required>
+                    
+                        <label for="setor_reuniao">Setor:</label>
+                        <select id="setor_reuniao" required>
+                            <option value="Almoxarifado">Almoxarifado</option>
+                            <option value="Comercial">Comercial</option>
+                            <option value="Compras">Compras</option>
+                            <option value="Controladoria">Controladoria</option>
+                            <option value="Diretoria">Diretoria</option>
+                            <option value="Expedição">Expedição</option>
+                            <option value="Financeiro">Financeiro</option>
+                            <option value="Portaria">Portaria</option>
+                            <option value="PPCP">PPCP</option>
+                            <option value="Qualidade">Qualidade</option>
+                            <option value="Recepção">Recepção</option>
+                            <option value="RH">RH</option>
+                            <option value="TI">TI</option>
+                            <option value="MT-1">MT-1</option>
+                            <option value="MT-2">MT-2</option>
+                            <option value="MT-3">MT-3</option>
+                            <option value="MT-4">MT-4</option>
+                            <option value="MT-5">MT-5</option>
+                            <option value="TR'S">TR'S</option>
+                            <option value="MCT'S">MCT'S</option>
+                        </select>
+                    </div>
+                
+                    <div class="centro">
+                        <label for="descricao_reuniao">Breve Descrição da Reunião:</label>
+                        <textarea id="descricao_reuniao" name="descricao_reuniao" rows="4" required></textarea>
+                    </div>
+
+                    <div class="inferior">
+                        <label for="data_reuniao">Selecione o dia:</label>
+                        <input type="date" id="data_reuniao" name="data_reuniao" required>
+                        <!-- Outros campos -->
+                        <label for="hora_inicio_reuniao">Hora de Início:</label>
+                        <input type="time" id="hora_inicio_reuniao" required>
+                        
+                        <label for="hora_termino_reuniao">Hora de Término:</label>
+                        <input type="time" id="hora_termino_reuniao" required>  
+                    </div> 
+
+                    <div class="botoes">
+                        <button type="submit" class="botao_submit">Reservar Sala Reunião</button>
+
+                        <button type="button" class="botao_cancelar" onclick="esconderSecao('secao_reuniao')">Cancelar</button>
+                    </div>
+            </form>
+            <div class="reservas_agendadas">
+                <h2>Próximas reservas agendadas</h2>
+                <table id="reservas_reuniao">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Setor</th>
+                            <th>Dia</th>
+                            <th>Hora Início</th>
+                            <th>Hora Término</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Copyright 2025 © - Perfipar™
+    </footer>
+    <div id="modalConfirmacaoReserva" class="modal-overlay" style="display: none;">
+        <div class="modal-conteudo">
+          <p id="textoConfirmacaoReserva"></p>
+          <div class="botoes">
+            <button id="btnConfirmarReserva" class="btn-confirmar">Confirmar</button>
+            <button id="btnCancelarReserva" class="btn-cancelar">Cancelar</button>
+          </div>
+        </div>
+      </div>        
+    <script src="reservas.js"></script>
+</body>
+</html>

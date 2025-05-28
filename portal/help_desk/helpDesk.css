@@ -1,0 +1,210 @@
+/* Início ID lateral_esq */
+    #lateral_esq {
+        background: #fff;
+        padding: 30px;
+        box-shadow: 10px 10px rgba(0,0,0,0.3);
+        border-radius: 8px;
+        width: 200px;
+        text-align: left;
+    }
+
+    #lateral_esq h2 {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    #lateral_esq img {
+        width: 50px;
+    }
+
+    #lateral_esq table {
+        border-collapse: collapse;
+    }
+    
+    #lateral_esq table tr:hover td {
+        background: #ebf6fd;
+        /* color: #fff; */
+    }
+
+    #lateral_esq table td {
+        text-decoration: none;
+        color: #002992;
+        width: 10%;
+        margin: 100px auto;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+    }
+/* Fim ID lateral_esq */
+
+/* Início ID chamado */
+    #chamado {
+        background: #fff;
+        padding: 30px;
+        box-shadow: 10px 10px rgba(0,0,0,0.3);
+        border-radius: 8px;
+        width: 600px;
+        text-align: center;
+    }
+
+    #chamado form {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* espaços entre labels no formulário */
+    }
+    
+    #chamado form label {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    #chamado form input, form select, form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box; /* para garantir que o padding não quebre o layout */
+    }
+    
+    button[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+      
+    #chamado button {
+        padding: 10px 20px;
+        background: #007BFF;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #chamado button:hover {
+        background:  #0056b3;
+        transform: scale(1.01);
+    }
+
+    #chamado button:focus, input:focus, textarea:focus {
+        outline: 2px solid #0072be;
+    }
+/* Fim ID chamado */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-conteudo {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: left;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.botoes-modal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.botoes-modal button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botoes-modal button:hover {
+    transform: scale(1.01);
+}
+
+#btnConfirmarEnvio {
+    background-color: #28a745;
+    color: white;
+}
+
+.botoes-modal button:last-child {
+    background-color: #dc3545;
+    color: white;
+}  
+
+/* ########################################################################################## */
+
+@media (max-width: 1320px) {
+    #lateral_esq {
+        background: #fff; 
+        margin: 0 0 40px;
+    }
+
+    #lateral_esq table td{
+        padding: 0;
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    #chamado {
+        width: 80%;
+    }
+
+    #chamado button {
+        padding: 8px 16px;
+    }
+}
+
+/* ########################################################################################## */
+
+@media (max-width: 540px) {
+    #lateral_esq {
+        width: 100%;
+    }
+
+    #lateral_esq table {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    #chamado {
+        width: 100%;
+        margin: 0;
+    }
+
+    #chamado button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    #chamado input[type="text"], input[type="email"], textarea {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #chamado th, td {
+        padding: 8px;
+    }
+}

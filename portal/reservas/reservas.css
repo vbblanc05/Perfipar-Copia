@@ -1,0 +1,355 @@
+.erro {
+    color: brown;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 2px;
+}
+
+
+#escolha_sala {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-around;
+    padding-top: 120px;
+}
+
+#escolha_sala img {
+    width: 100%;
+    height: 250px;
+}
+
+#escolha_sala section p {
+    margin: 20px auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#escolha_sala section a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* #secao_escolha {
+    margin-bottom: 0;
+} */
+
+#secao_auditorio, #secao_reuniao  {
+    display: none;
+}
+
+#sala_auditorio, #sala_reuniao  {
+    background: #fff;
+    padding: 5px 30px;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    width: 400px;
+    text-align: left;
+}
+
+#sala_reuniao:hover, #sala_auditorio:hover {
+    transform: scale(1.05);
+    transition: 1s ;
+}
+
+#sala_auditorio {
+    margin-bottom: 30px;
+}
+
+#form_auditorio, #form_reuniao {
+    background: #fff;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: left;
+    display: flex; 
+    flex-direction: column;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    gap: 10px; /* espaços entre labels no formulário */
+}
+
+#form_auditorio img, #form_reuniao img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    display: flex;
+}
+
+#form_auditorio label, #form_reuniao label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#form_auditorio input, select, textarea, #form_reuniao input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* para garantir que o padding não quebre o layout */
+}
+
+#form_auditorio button, #form_reuniao button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form_auditorio button:hover, #form_reuniao button:hover {
+    background:  #0056b3;
+    transform: scale(1.01);
+}
+
+#form_auditorio .botao_cancelar, #form_reuniao .botao_cancelar {
+    background: brown;
+}
+
+
+#form_auditorio .botao_cancelar:hover, #form_reuniao .botao_cancelar:hover {
+    background:  #000;
+    transform: scale(1.01);
+}
+
+#form_auditorio button:focus, input:focus, textarea:focus, #form_reuniao button:focus, input:focus, textarea:focus {
+    outline: 2px solid #0072be;
+}
+
+.superior {
+    display: flex;
+    gap: 20px; /* Espaço entre os campos */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: solid 1px #00000056;
+}
+
+/* .superior label {
+    flex: 1; Para alinhar corretamente os labels
+} */
+
+.superior input {
+    flex: 2; /* Para deixar os campos maiores */
+}
+
+.superior select {
+    flex: 1; /* Para deixar os campos maiores */
+}
+
+/* Para que a descrição ocupe toda a largura */
+.centro {
+    display: block;
+    width: 100%;
+}
+
+.centro textarea {
+    width: 100%;
+    resize: none;
+}
+
+/* Deixa a data e os horários lado a lado */
+.inferior {
+    display: flex;
+    gap: 20px; /* Espaço entre os elementos */
+    justify-content: space-between;
+}
+
+.inferior label {
+    flex: 1;
+}
+
+.inferior input {
+    flex: 1;
+}
+
+.botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 1000;
+}
+  
+.modal-conteudo {
+background: white;
+padding: 20px 30px;
+border-radius: 12px;
+text-align: center;
+max-width: 400px;
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+animation: fadeIn 0.3s ease;
+}
+
+.modal-conteudo p {
+margin-bottom: 20px;
+}
+
+.modal-conteudo .botoes {
+display: flex;
+justify-content: space-around;
+gap: 15px;
+}
+
+.botoes button:hover {
+    transform: scale(1.01);
+}
+
+.btn-confirmar {
+background-color: #28a745;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+.btn-cancelar {
+background-color: #dc3545;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: scale(0.95); }
+to { opacity: 1; transform: scale(1); }
+}
+  
+/* Início ID horarios reservas */
+    .reservas_agendadas {
+        background: #fff;
+        width: 80%;
+        min-height: 200px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 10px 10px rgba(0,0,0,0.3);
+        border-radius: 8px;
+        text-align: left;
+        /* display: flex; */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .reservas_agendadas table {
+        width: 100%;
+        margin-bottom: auto;
+        border-collapse: collapse;
+        text-align: center;
+        border: 1px solid #ddd;
+        table-layout: fixed;
+        display: block;
+        overflow: auto;
+        max-height: 300px;
+    }
+
+    /* .reservas_agendadas table thead tr {
+        display: block;
+            background: #e4e4e4;
+            padding-right: 16px;
+    }
+
+    .reservas_agendadas table tbody {
+        display: block;
+        overflow: auto;
+        max-height: 300px;
+    } */
+
+    .reservas_agendadas table tr:hover td {
+        background: #cfeaf7;
+    }
+
+    .reservas_agendadas tr:nth-child(even) {
+        background: #ebf6fd;
+    }
+
+    .reservas_agendadas th, td {
+        padding: 10px;
+        width: 500px;
+    }
+
+    .reservas_agendadas thead {
+        position: sticky;
+        top: 0;
+        background: #e4e4e4;
+        z-index: 2;
+    }
+
+    .reservas_agendadas td {
+        min-width: 80px;
+        max-width: 500px;
+    }
+/* Fim ID horarios reservas */
+
+/* ########################################################################################## */
+
+@media (max-width: 1035px) {
+    .superior, .inferior {
+        display: flex;
+        flex-wrap: wrap; /* Para garantir que os itens não se sobreponham */
+        justify-content: space-between;
+    }
+
+    .reservas_agendadas {
+        padding: 20px;
+        margin: 20px auto; /* Ajustado para que a margem seja mais uniforme */
+        width: 80%; /* Usar uma largura mais flexível para telas menores */
+        /* max-width: 1200px; Garantir que não ultrapasse a largura da tela */
+        text-align: center;
+    }
+
+    .reservas_agendadas table {
+        /* overflow-x: auto; */
+        /* white-space: nowrap; */
+        width: 100%; /* A tabela deve ocupar 100% da largura disponível */
+    }
+
+    .reservas_agendadas tr, th, td {
+        padding-right: 15px; /* Reduzir o padding direito para melhorar a leitura */
+    }
+}
+
+/* ########################################################################################## */
+
+@media (max-width: 540px) {
+    #escolha_sala {
+        justify-content: center;
+    }
+
+    #sala_auditorio, #sala_reuniao {
+        width: 250px;
+    }
+    
+    #form_auditorio, #form_reuniao, .reservas_agendadas {
+        padding: 10px; /* Diminuir o padding para telas pequenas */
+        margin: 10px auto; /* Reduzir a margem */
+        width: 90%; /* Ajuste da largura para caber melhor */
+        text-align: center;
+        justify-content: center;
+    }
+
+    .reservas_agendadas table {
+        display: block;
+        /* overflow-x: auto; */
+        /* white-space: nowrap; */
+        width: 100%; /* Melhor adaptação da tabela */
+    }
+
+    .reservas_agendadas th, td {
+        padding: 8px; /* Ajuste do padding para células menores */
+    }
+}

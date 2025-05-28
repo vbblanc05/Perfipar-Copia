@@ -1,0 +1,275 @@
+main section a {
+    text-decoration: none;
+    color: #000;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+#escolha_lista {
+    background: #fff;
+    padding: 5px 30px;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+#escolha_lista:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+#escolha_lista {
+    margin-bottom: 70px;
+}
+
+#chamados_requisitados, #chamados_arquivados {
+    display: none;
+    background: #fff;
+    width: 70%;
+    min-height: 265px;
+    margin: 60px auto;
+    padding: 20px;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0072be;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: #000;
+    transform: scale(1.01);
+}
+
+button:focus, input:focus, textarea:focus {
+    outline: 2px solid #0072be;
+}
+
+#tab_suporte {
+    overflow: auto;
+    max-height: 500px;
+}
+
+#tab_suporte table {
+    width: 100%;
+    margin-bottom: auto;
+    border-collapse: collapse;
+    text-align: left;
+    border: 2px solid #ddd;
+    border-top: none;
+    table-layout: fixed;    
+}
+
+#tab_suporte thead {
+    position: sticky;
+    top: 0;
+    background: #e4e4e4;
+    z-index: 2;
+}
+
+#tab_suporte table tr:hover td {
+    background: #cfeaf7;
+    /* color: #fff; */
+    /* border-left: 1px solid #ebf6fd;
+    border-right: 1px solid #ebf6fd; */
+}
+
+#tab_suporte table tr:nth-child(even) {
+    background: #ebf6fd;
+}
+
+#tab_suporte table th, td {
+    padding: 10px ;
+    /* border: 1px solid #ddd; */
+}
+
+.status {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 30px 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" viewBox="0 0 24 24" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    /* margin: 0 40px; */
+}
+
+.status:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+
+.status:hover {
+    background: #fff;
+    color: #000;
+    /* border: 1px solid #000;
+    padding: 4px 19px; */
+}
+
+.status option {
+    background: #fff;
+    color: #000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+  
+.modal-conteudo {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+  
+.botoes-modal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.botoes-modal button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botoes-modal button:hover {
+    transform: scale(1.01);
+}
+  
+#btnConfirmarExclusao {
+    background-color: #d9534f;
+    color: white;
+}
+  
+.botoes-modal button:last-child {
+    background-color: #6c757d;
+    color: white;
+}
+  
+  /* Fade-out na remoção */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#modalSolucao textarea {
+    resize: vertical;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo para a coluna de solução */
+/* #tab_suporte table td:nth-child(6) {
+    max-width: 200px;
+    word-wrap: break-word;
+    padding: 8px;
+} */
+
+/* Estilo para o botão de registrar solução */
+.btn-solucao {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-solucao:hover {
+    background: #218838;
+}
+  
+/* ########################################################################################## */
+
+@media (max-width: 1320px) {
+    #chamados_requisitados, #chamados_arquivados {
+        background: #fff; 
+        padding: 20px;
+        margin: 150px auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    #chamados_requisitados, #chamados_arquivados table {
+        display: flex;
+        /* overflow-x: auto;
+        white-space: nowrap; */
+    }
+
+    #chamados_requisitados, #chamados_arquivados th, td {
+        padding-right: 60px;
+    }
+}
+
+/* ########################################################################################## */
+
+@media (max-width: 540px) {
+    #chamados_requisitados, #chamados_arquivados {
+        background: #fff; 
+        padding: 20px;
+        margin: 150px auto;
+        width: 80%;
+        /* text-align: center; */
+    }
+
+    /* #chamados_requisitados, #chamados_arquivados table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    } */
+
+    #chamados_requisitados, #chamados_arquivados th, td {
+        padding: 8px;
+    }
+
+    .subtitulo h2{
+        font-size: 14px;
+    }
+
+    button{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

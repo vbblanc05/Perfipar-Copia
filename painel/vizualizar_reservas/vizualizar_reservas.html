@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Reservas</title>
+    <link rel="stylesheet" href="/portal/pag_principal/estilo.css">
+    <link rel="stylesheet" href="vizualizar_reservas.css">
+    <link rel="icon" href="/img/icone_site.png" type="image/x-icon">
+    <!-- Ícone lixeira importada -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>Visualizar Reservas</h1>
+    </header> 
+    <main id="escolha_sala">
+        <section>
+            <a href="#secao_auditorio" onclick="mostrarSecao('secao_auditorio')">
+                <div id="sala_auditorio">
+                    <h2>Sala Auditório</h2>
+                    <img src="/img/sala_auditorio.png">
+                    <h4>Sala localizada ao lado da Controladoria.</h4>
+                </div>
+            </a>
+            <a href="#secao_reuniao" onclick="mostrarSecao('secao_reuniao')">
+                <div id="sala_reuniao">
+                    <h2>Sala Reunião</h2>
+                    <img src="/img/sala_reuniao.png">
+                    <h4>Sala localizada ao lado da Recepção.</h4>
+                </div>
+            </a>
+        </section>
+    
+        <section id="secao_auditorio">
+            <div class="reservas_agendadas">
+                <h2>Reservas - Sala Auditório</h2>
+                <table id="reservas_auditorio">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Setor</th>
+                            <th>Descrição</th>
+                            <th>Dia</th>
+                            <th>Hora Início</th>
+                            <th>Hora Término</th>
+                            <th>Excluir Reserva</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    
+        <section id="secao_reuniao">
+            <div class="reservas_agendadas">
+                <h2>Reservas - Sala Reunião</h2>
+                <table id="reservas_reuniao">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Setor</th>
+                            <th>Descrição</th>
+                            <th>Dia</th>
+                            <th>Hora Início</th>
+                            <th>Hora Término</th>
+                            <th>Excluir Reserva</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        Copyright 2025 © - Perfipar™
+    </footer>
+    <div id="modalConfirmacao" style="display:none;" class="modal-overlay">
+        <div class="modal-box">
+          <p id="mensagemModal">Tem certeza que deseja excluir esta reserva?</p>
+          <div class="modal-botoes">
+            <button id="btnConfirmarExclusao">Sim</button>
+            <button onclick="fecharModal()">Cancelar</button>
+          </div>
+        </div>
+    </div>      
+</body>
+<script src="vizualizar_reservas.js"></script>
+</html>

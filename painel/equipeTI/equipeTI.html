@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Chamados - Equipe de TI</title>
+    <link rel="stylesheet" href="/portal/pag_principal/estilo.css">
+    <link rel="stylesheet" href="equipeTI.css">
+    <link rel="icon" href="/img/icone_site.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Painel de Chamados</h1>
+    </header>
+    <main>
+        <section>
+            <a href="#chamados_requisitados" onclick="mostrarSecao('chamados_requisitados')">
+                <div id="escolha_lista">
+                    <h2>Lista de Chamados Requisitados</h2>
+                    <!-- <img src="/img/escolha_lista.png"> -->
+                    <!-- <h4>Sala localizada ao lado da Controladoria.</h4> -->
+                </div>
+            </a>
+            <a href="#chamados_arquivados" onclick="mostrarSecao('chamados_arquivados')">
+                <div id="escolha_lista">
+                    <h2>Lista de Chamados Arquivados</h2>
+                    <!-- <img src="/img/escolha_lista.png"> -->
+                    <!-- <h4>Sala localizada ao lado da Recepção.</h4> -->
+                </div>
+            </a>
+        </section>
+
+        <section id="chamados_requisitados">
+            <div class="subtitulo">
+                <h2>Lista de Chamados Requisitados</h2>
+                <button type="button" id="btn_limpar">Limpar chamados</button>
+            </div>
+            
+            <div id="tab_suporte">
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Setor</th>
+                            <th>Problema</th>
+                            <th>Status</th>
+                            <th>Solução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="chamados_arquivados">
+            <div class="subtitulo">
+                <h2>Lista de Chamados Solucionados</h2>
+                <button type="button" id="btn_limpar">Limpar chamados</button>
+            </div>
+            
+            <div id="tab_suporte">
+                <table>
+                    <thead>
+                        <tr>
+                            <!-- <th>ID</th> -->
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Setor</th>
+                            <th>Problema</th>
+                            <th>Status</th>
+                            <th>Solução</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Chamados serão adicionados aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        Copyright 2025 © - Perfipar™
+    </footer>
+    <div id="modalConfirmacao" class="modal">
+        <div class="modal-conteudo">
+            <!-- <p>Esta ação irá:</p> -->
+            <ul style="text-align: left; margin: 10px 0;">
+                <li>✅ Arquivar permanentemente chamados <strong>FECHADOS</strong></li>
+                <li>❌ Excluir permanentemente chamados <strong>CANCELADOS</strong></li>
+            </ul>
+            <p>Deseja continuar?</p>
+        <div class="botoes-modal">
+            <button id="btnConfirmarExclusao">Confirmar</button>
+            <button onclick="fecharModal()">Cancelar</button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal de solução -->
+    <div id="modalSolucao" class="modal">
+        <div class="modal-conteudo">
+        <h3>Descreva a solução aplicada:</h3>
+        <textarea id="textoSolucao" rows="5" style="width: 100%; margin-top: 10px;"></textarea>
+        <div class="botoes-modal" style="margin-top: 15px;">
+            <button id="btnSalvarSolucao">Salvar</button>
+            <button onclick="fecharModalSolucao()">Cancelar</button>
+        </div>
+        </div>
+    </div>
+  
+
+    <script src="equipeTI.js"></script>
+</body>
+</html>
